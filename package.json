@@ -6,14 +6,15 @@
   "author": "Gabriel Azevedo <azevgabriel@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "server": "ts-node server.ts",
-    "client": "ts-node client.ts"
+    "server-tcp": "ts-node-dev src/server/tcp.ts",
+    "server-udp": "ts-node-dev src/server/udp.ts",
+    "client-tcp": "ts-node-dev src/client/tcp.ts",
+    "client-udp": "ts-node-dev src/client/udp.ts"
   },
-  "dependencies": {
-    "ts-node": "^10.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^17.0.10",
+    "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.5"
   }
 }

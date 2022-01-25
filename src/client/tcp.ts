@@ -2,7 +2,7 @@ import net from 'net';
 import readline from 'readline';
 
 const client = new net.Socket();
-client.connect(4000, '127.0.0.1', () => {
+client.connect(5555, '0.0.0.0', () => {
   console.log('Connected');
   const rl = readline.createInterface({
     input: process.stdin,
@@ -12,5 +12,7 @@ client.connect(4000, '127.0.0.1', () => {
     client.write(line);
   });
 });
+
+
   
 
