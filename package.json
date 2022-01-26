@@ -9,11 +9,18 @@
     "server-tcp": "ts-node-dev src/server/tcp.ts",
     "server-udp": "ts-node-dev src/server/udp.ts",
     "client-tcp": "ts-node-dev src/client/tcp.ts",
-    "client-udp": "ts-node-dev src/client/udp.ts"
+    "client-udp": "ts-node-dev src/client/udp.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
-  "dependencies": {},
+  "dependencies": {
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.41",
+    "uuid": "^8.3.2"
+  },
   "devDependencies": {
     "@types/node": "^17.0.10",
+    "@types/uuid": "^8.3.4",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.5"
   }
