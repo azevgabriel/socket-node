@@ -6,20 +6,22 @@
   "author": "Gabriel Azevedo <azevgabriel@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "server-tcp": "ts-node-dev src/server/tcp.ts",
-    "server-udp": "ts-node-dev src/server/udp.ts",
-    "client-tcp": "ts-node-dev src/client/tcp.ts",
-    "client-udp": "ts-node-dev src/client/udp.ts",
+    "dev": "ts-node-dev src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
+    "socket.io": "^4.4.1",
     "typeorm": "^0.2.41",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/node": "^17.0.10",
+    "@types/socket.io": "^3.0.2",
     "@types/uuid": "^8.3.4",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.5"

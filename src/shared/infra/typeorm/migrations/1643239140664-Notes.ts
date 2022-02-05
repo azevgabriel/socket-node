@@ -5,7 +5,7 @@ export class Client1643239140664 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable (
             new Table({
-                name: 'clients',
+                name: 'notes',
                 columns: [
                     {
                         name: 'id',
@@ -13,12 +13,14 @@ export class Client1643239140664 implements MigrationInterface {
                         isPrimary: true,
                     },
                     {
-                        name: 'address',
+                        name: 'title',
                         type: 'varchar',
+                        length: '100',
                     },
                     {
-                        name: 'port',
+                        name: 'description',
                         type: 'varchar',
+                        length: '255'
                     },
                     {
                         name: 'created_at',
