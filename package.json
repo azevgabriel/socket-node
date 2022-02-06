@@ -6,6 +6,7 @@
   "author": "Gabriel Azevedo <azevgabriel@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "client": "ts-node-dev client/udp.ts",
     "dev": "ts-node-dev src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },

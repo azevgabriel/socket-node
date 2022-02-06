@@ -12,13 +12,14 @@ class NotesRepository implements INotesRepository {
     this.repository = getRepository(Note);
   }
 
-  async create(data: ICreateNoteDTO): Promise<void> {
-    const note = this.repository.create(data);
+  async create({title, description}: ICreateNoteDTO): Promise<void> {
+    const note = this.repository.create({title, description});
     await this.repository.save(note);
   }
 
   async findAll(): Promise<Note[]> {
-    return await this.repository.query(`SELECT * FROM notes`);
+    const notes = await this.repository.query(`SELECT * FROM notes`);
+    return notes;
   }
 
 }

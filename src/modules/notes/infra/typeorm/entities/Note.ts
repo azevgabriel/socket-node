@@ -15,9 +15,6 @@ class Note {
   @CreateDateColumn()
   created_at: Date;
 
-  @CreateDateColumn()
-  updated_at: Date;
-
   constructor() {
     if(!this.id) {
       this.id = uuidv4();
