@@ -1,19 +1,23 @@
 import dgram from "dgram";
+import { AddThemeToNoteController } from '../../../modules/notes/useCases/addThemeToNote/AddThemeToNoteController';
 
 const serverUdp = dgram.createSocket('udp4');
+const addThemeToNoteController = new AddThemeToNoteController();
 
 serverUdp.on('error', (err) => {
   console.log(`server error:\n${err.stack}`);
   serverUdp.close();
 });
 
-serverUdp.on('message', (msg, rinfo) => {
-  console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
+serverUdp.on('message', async (msg, rinfo) => {
+  const data = msg.toString();
+  const [command, nameTheme] = data.split(' ');
+  if(command === 'addTheme'){
+    await addThemeToNoteController.handle(nameTheme);
+    serverUdp.send('Theme added', 0, 'Theme added'.length, rinfo.port, rinfo.address);
+  }
 });
 
-serverUdp.on('listening', () => {
-  const address = serverUdp.address();
-  console.log(`server listening ${address.address}:${address.port}`);
-});
+serverUdp.on('listening', () => {});
 
 export { serverUdp };

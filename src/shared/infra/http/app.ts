@@ -2,6 +2,7 @@ import "reflect-metadata";
 import "../typeorm";
 import "../../container";
 
+import cors from "cors";
 import express from "express";
 import { Server } from "socket.io";
 import http from "http";
@@ -14,6 +15,7 @@ const app = express();
 const listAllNotesController = new ListAllNotesController();
 let interval: any;
 
+app.use(cors());
 app.use(express.json());
 app.use(router);
 

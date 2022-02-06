@@ -23,6 +23,12 @@ export class Client1643239140664 implements MigrationInterface {
                         length: '255'
                     },
                     {
+                        name: 'theme',
+                        type: 'varchar',
+                        length: '100',
+                        isNullable: true
+                    },
+                    {
                         name: 'created_at',
                         type: 'timestamp',
                         default: 'now()',
@@ -33,7 +39,7 @@ export class Client1643239140664 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable('clients');
+        await queryRunner.dropTable('notes');
     }
 
 }

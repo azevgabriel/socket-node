@@ -1,12 +1,13 @@
 # Sockets-Node
 
 > Deve ser desenvolvida uma aplicação que faça uso de sockets. 
+> A aplicação consiste em ser um gerenciador de rodadas de Brainstroming
 
 ### Componentes mínimos:
 
 - [x] Conexão com banco de dados.
 - [x] Sockets TCP.
-- [ ] Sockets UDP.
+- [x] Sockets UDP.
 - [x] Ser uma aplicação de uso real.
 
 ### 💻 Pré-requisitos:

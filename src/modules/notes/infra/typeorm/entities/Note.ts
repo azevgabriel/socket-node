@@ -12,6 +12,9 @@ class Note {
   @Column('varchar')
   description: string;
 
+  @Column('varchar')
+  theme: string;
+
   @CreateDateColumn()
   created_at: Date;
 

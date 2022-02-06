@@ -1,6 +1,6 @@
 
 import { ICreateNoteDTO } from "../../../dtos/ICreateNoteDTO";
-import { INotesRepository } from "../../../repositories/INotesRepository";
+import { IAddTheme, INotesRepository } from "../../../repositories/INotesRepository";
 import { getRepository, Repository } from "typeorm";
 import { Note } from "../entities/Note";
 
@@ -18,8 +18,12 @@ class NotesRepository implements INotesRepository {
   }
 
   async findAll(): Promise<Note[]> {
-    const notes = await this.repository.query(`SELECT * FROM notes`);
+    const notes = await this.repository.query(`SELECT * FROM notes WHERE theme is null`);
     return notes;
+  }
+
+  async addTheme({notes, theme}: IAddTheme): Promise<void> {
+    await this.repository.update(notes.map(note => note.id), {theme});
   }
 
 }
