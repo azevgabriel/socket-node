@@ -4,10 +4,10 @@
 
 ### Componentes mínimos:
 
-- [ ] Conexão com banco de dados.
+- [x] Conexão com banco de dados.
 - [x] Sockets TCP.
-- [x] Sockets UDP.
-- [ ] Ser uma aplicação de uso real.
+- [ ] Sockets UDP.
+- [x] Ser uma aplicação de uso real.
 
 ### 💻 Pré-requisitos:
 
