@@ -1,5 +1,5 @@
-import { ICreateNoteDTO } from "../../../../modules/notes/dtos/ICreateNoteDTO";
-import { INotesRepository } from "../../../../modules/notes/repositories/INotesRepository";
+import { ICreateNoteDTO } from "../../../notes/dtos/ICreateNoteDTO";
+import { INotesRepository } from "../../../notes/repositories/INotesRepository";
 import { inject, injectable } from "tsyringe";
 
 @injectable()

@@ -1,5 +1,5 @@
-import { Note } from "modules/notes/infra/typeorm/entities/Note";
-import { INotesRepository } from "modules/notes/repositories/INotesRepository";
+import { Note } from "../../../notes/infra/typeorm/entities/Note";
+import { INotesRepository } from "../../repositories/INotesRepository";
 import { inject, injectable } from "tsyringe";
 
 @injectable()

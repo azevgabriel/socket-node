@@ -1,4 +1,4 @@
-import { Note } from "modules/notes/infra/typeorm/entities/Note";
+import { Note } from "../../../notes/infra/typeorm/entities/Note";
 import { container } from "tsyringe";
 import { ListAllNotesUseCase } from "./ListAllNotesUseCase";
 

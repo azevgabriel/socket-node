@@ -1,4 +1,4 @@
-import { INotesRepository } from "../../../../modules/notes/repositories/INotesRepository";
+import { INotesRepository } from "../../../notes/repositories/INotesRepository";
 import { inject, injectable } from "tsyringe";
 
 @injectable()
